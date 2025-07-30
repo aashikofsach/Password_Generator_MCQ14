@@ -3,4 +3,35 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: sans-serif;
+}
+.container {
+  background-color: #24232b;
+  padding: 24px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2a8b8b;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+}
+.copyBtn {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
