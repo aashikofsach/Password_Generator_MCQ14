@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import usePasswordGenerator from './hooks/usePasswordGenerator';
+import StrengthChecker from './components/StrengthChecker';
 
 function App() {
   const [length, setLenght] = useState();
@@ -63,6 +64,8 @@ function App() {
             })
           }
         </div>
+
+        <StrengthChecker password={password}/>
         {
           error && <div className='error'>{error}</div>
         }

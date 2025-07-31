@@ -72,6 +72,16 @@ button {
   color: red;
   text-align: left;
 }
+.strength {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 15px;
+}
+.str-string {
+  font-weight: bold;
+  font-size: 20px;
+}
 
 /* 
 .title {
