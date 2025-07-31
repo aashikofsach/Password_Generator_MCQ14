@@ -68,3 +68,12 @@ button {
   padding: 20px;
   /* width: 100%; */
 }
+.error {
+  color: red;
+  text-align: left;
+}
+
+/* 
+.title {
+  word-wrap: break-word;
+} */
