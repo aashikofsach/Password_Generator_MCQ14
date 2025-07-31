@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+  const [length , setLenght] = useState();
 
   const checkboxData = [
     {title : "Include Uppercase Letters", state: false},
@@ -17,15 +19,15 @@ function App() {
           <div className="title">dafbakjfj</div>
           <button className='copyBtn' onClick={() => { }}>Copy</button>
         </div>
-        <div className='charLength'>
+        <div className='charlength'>
           <span>
             <label >Charcter Length</label>
-            <label >4</label>
+            <label >{length}</label>
           </span>
-          <input type="range" min={4} max={20} value={13} />
+          <input type="range" min={4} max={20} value={length} onChange={(e)=> setLenght(e.target.value)} />
 
         </div>
-        <div className='checkboxes'>
+        <div className='check boxes'>
           {
             checkboxData.map((checkbox , index)=>{
               return <div key={index}>
