@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import usePasswordGenerator from './hooks/usePasswordGenerator';
 import StrengthChecker from './components/StrengthChecker';
+import Button from './components/Button';
+import Checkbox from './components/Checkbox';
 
 function App() {
   const [length, setLenght] = useState();
@@ -42,7 +44,8 @@ function App() {
         {
           password && <div className='header'>
             <div className="title">{password}</div>
-            <button className='copyBtn' onClick={() => copyCat()}>{copy ? "Copied !" : "Copy"}</button>
+            {/* <button className='copyBtn' onClick={() => copyCat()}>{copy ? "Copied !" : "Copy"}</button> */}
+            <Button text={copy ? "Copied !" : "Copy"} onClick={() => copyCat()} customclass="copyBtn"/>
           </div>
         }
 
@@ -57,10 +60,11 @@ function App() {
         <div className='checkboxes'>
           {
             checkboxData.map((checkbox, index) => {
-              return <div key={index}>
-                <input type="checkbox" checked={checkbox.state} onChange={() => handleCheckboxData(index)} />
-                <label >{checkbox.title}</label>
-              </div>
+              // return <div key={index}>
+              //   <input type="checkbox" checked={checkbox.state} onChange={() => handleCheckboxData(index)} />
+              //   <label >{checkbox.title}</label>
+              // </div>
+              return <Checkbox key={index} checkbox={checkbox}  onChange={() => handleCheckboxData(index)}/>
             })
           }
         </div>
@@ -70,7 +74,8 @@ function App() {
           error && <div className='error'>{error}</div>
         }
 
-        <button className='generateBtn' onClick={()=> generatePassword(checkboxData, length)}>Generate Button</button>
+        {/* <button className='generateBtn' onClick={()=> generatePassword(checkboxData, length)}>Generate Button</button> */}
+        <Button onClick={()=> generatePassword(checkboxData, length)} text="Generate Button" customclass="generateBtn" />
 
       </div>
     </div>
